@@ -1,10 +1,15 @@
-<h4>Article detail</h4>
-<img src="" class="img-fluid" alt="">
-<h1>Title</h1>
+<ng-template [ngIf]="!article">
+  No article selected
+</ng-template>
+
+<img src="{{article?.thumbnail}}" class="img-fluid" alt="">
+<h1>{{article?.title}}</h1>
 <div class="row">
   <div class="col-md-5">
-    By Line
+    By Line: {{article?.byline}}
   </div>
-  <div class="col-md-5">Date</div>
+  <div class="col-md-5">
+    Published: {{article?.date | date:mediumDate}}
+  </div>
 </div>
-<div>Body</div>
+<div [innerHTML]="article?.body"></div>

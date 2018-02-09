@@ -9,14 +9,19 @@ const routes: Routes = [
   { path: '', redirectTo: '/articles', pathMatch: 'full' },
   {
     path: 'articles',
-    component: ArticlesComponent
-    // children: [{ path: ':id', component: ArticleComponent }]
+    component: ArticlesComponent,
+    children: [
+      // { path: '', pathMatch: 'full', component: PageNotFoundComponent },
+      { path: ':id', component: ArticleComponent }
+    ]
   },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes
+    // , { enableTracing: true }
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

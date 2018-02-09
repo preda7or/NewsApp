@@ -1,5 +1,4 @@
 <h4>Article list</h4>
-<ul class="list-group">
-  <li class="list-group-item">x</li>
-  <li class="list-group-item">x</li>
-</ul>
+<div class="list-group" *ngFor="let article of (articleList|async)">
+  <a [routerLink]="[article.id|escape]" class="waves-effect list-group-item list-group-item-action" [routerLinkActive]="['active']">{{ article.title }}</a>
+</div>
