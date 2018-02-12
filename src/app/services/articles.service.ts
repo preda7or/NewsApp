@@ -30,14 +30,9 @@ export class ArticlesService {
       }
     };
     Object.assign(config.params, queryparams);
-    // console.log(
-    //   'query:',
-    //   `${AppSettings.API_URL}${urlPath}?api-key=${config.params['api-key']}`
-    // );
     return this.http
       .get<T>(`${AppSettings.API_URL}/${urlPath}`, config)
       .map(data => {
-        // console.log('success');
         return data;
       });
   }
@@ -70,10 +65,6 @@ export class ArticlesService {
    * @param id URI encoded path for the selected articles
    */
   public getArticle(id: string): Observable<Article> {
-    // if (id == null || !id.length) {
-    //   return Observable.empty();
-    // }
-
     const config = {
       'show-fields': 'body,byline,thumbnail'
     };

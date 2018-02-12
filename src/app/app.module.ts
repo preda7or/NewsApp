@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TimeAgoPipe } from 'time-ago-pipe';
+import { TimeAgoPipeModule } from 'time-ago-pipe/index';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,20 +24,24 @@ import { ArticlesService } from '@app-services/articles.service';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    PageNotFoundComponent,
     ArticlesComponent,
     ListComponent,
     ArticleComponent,
-    PageNotFoundComponent,
-    NavbarComponent,
-    EscapePipe,
-    ReprocessPipe,
     ArticleInputComponent,
-    HomeComponent,
     BigthumbPipe,
     CleanUrlPipe,
-    TimeAgoPipe
+    EscapePipe,
+    ReprocessPipe
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TimeAgoPipeModule
+  ],
   providers: [
     ArticlesService,
     ArticleResolver,

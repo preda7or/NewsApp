@@ -6,6 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
+    "build2":
+      "rm -rfv ../../preda7or.github.io/newsapp/* && ng build --prod --aot -bh /newsapp/ && cp -R ./dist/ ../../preda7or.github.io/newsapp/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
