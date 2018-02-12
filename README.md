@@ -1,12 +1,12 @@
 # NewsApp
 
-This Angular SPA in its `Articles` section lists the ten latest Guardian article.
+This Angular SPA in its `Articles` section lists the ten latest The Guardian article.
 
 Selecting from the list the app presents the article in more details.
 
 Relying on The Guardian’s API (open-platform.theguardian.com)
 
-If you would like to open a 
+The article url input can be used to open the details of a specific The Guardian article.
 
 ## Some technical details
 
