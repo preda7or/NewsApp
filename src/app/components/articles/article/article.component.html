@@ -1,15 +1,37 @@
-<ng-template [ngIf]="!article">
-  No article selected
-</ng-template>
-
-<img src="{{article?.thumbnail}}" class="img-fluid" alt="">
-<h1>{{article?.title}}</h1>
-<div class="row">
-  <div class="col-md-5">
-    By Line: {{article?.byline}}
-  </div>
-  <div class="col-md-5">
-    Published: {{article?.date | date:mediumDate}}
-  </div>
+<div class="progress primary-color-dark" *ngIf="article==null;else compContent">
+  <div class="indeterminate"></div>
 </div>
-<div [innerHTML]="article?.body"></div>
+
+<ng-template #compContent>
+
+  <div class="card card-cascade wider reverse">
+    <div class="view overlay hm-white-slight">
+      <img src="{{article.thumbnail | bigthumb}}" class="img-fluid" alt="">
+    </div>
+
+    <div class="card-body">
+      <h2 class="card-title">{{article.title}}</h2>
+      <div class="row py-3">
+        <div class="col-auto pr-0">
+          <i class="fa fa-user-circle"></i>
+        </div>
+        <div class="h5-responsive col-md-5 col-6">
+          <h5>
+            {{article.byline}}
+          </h5>
+        </div>
+        <div class="col-auto pr-0">
+          <i class="fa fa-calendar"></i>
+        </div>
+        <h5 class="h5-responsive col-md-5 col-6">
+          {{article.date|date:'medium'}}
+        </h5>
+      </div>
+      <div [innerHTML]="article.body | reprocess"></div>
+      <!-- <div>{{article.body | reprocess}}</div> -->
+
+    </div>
+  </div>
+  <!-- 
+ -->
+</ng-template>

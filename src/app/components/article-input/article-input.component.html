@@ -1,0 +1,14 @@
+<div class="pt-1">
+  <form (submit)="onSubmit(url.value)">
+    <div class="md-form">
+      <div class="prefix pt-0">
+        <button class="btn px-1 mt-0 waves-effect waves-light" routerLinkActive #rla="routerLinkActive" [routerLink]="['./',url.value | cleanurl]"
+          [ngClass]="{'btn-primary':rla.isActive,'btn-outline-primary':!rla.isActive}">
+          <i class="fa fa-newspaper-o"></i>
+        </button>
+      </div>
+      <input #url type="text" id="articleUrl" class="form-control" value="https://www.theguardian.com/us-news/2018/feb/09/john-kelly-from-the-designated-white-house-grownup-to-trumps-enabler">
+      <label for="articleUrl" class="active">Article URL</label>
+    </div>
+  </form>
+</div>

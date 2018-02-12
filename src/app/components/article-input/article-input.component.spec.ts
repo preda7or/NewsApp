@@ -1,27 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArticleComponent } from './article.component';
-import { BigthumbPipe } from '@app-pipes/bigthumb.pipe';
-import { ReprocessPipe } from '@app-pipes/reprocess.pipe';
+import { ArticleInputComponent } from './article-input.component';
 import { RouterModule } from '@angular/router';
+import { EscapePipe } from '@app-pipes/escape.pipe';
+import { ArticlesService } from '@app-services/articles.service';
 import { APP_BASE_HREF } from '@angular/common';
 import { CleanUrlPipe } from '@app-pipes/cleanurl.pipe';
 
-describe('ArticleComponent', () => {
-  let component: ArticleComponent;
-  let fixture: ComponentFixture<ArticleComponent>;
+describe('ArticleInputComponent', () => {
+  let component: ArticleInputComponent;
+  let fixture: ComponentFixture<ArticleInputComponent>;
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [
-          ArticleComponent,
-          BigthumbPipe,
-          ReprocessPipe,
-          CleanUrlPipe
-        ],
+        declarations: [ArticleInputComponent, EscapePipe, CleanUrlPipe],
         imports: [
-          RouterModule.forRoot([{ path: '', component: ArticleComponent }])
+          RouterModule.forRoot([{ path: '', component: ArticleInputComponent }])
         ],
         providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
       }).compileComponents();
@@ -29,7 +24,7 @@ describe('ArticleComponent', () => {
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ArticleComponent);
+    fixture = TestBed.createComponent(ArticleInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

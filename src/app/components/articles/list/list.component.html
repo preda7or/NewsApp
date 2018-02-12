@@ -1,4 +1,14 @@
-<h4>Article list</h4>
-<div class="list-group" *ngFor="let article of (articleList|async)">
-  <a [routerLink]="[article.id|escape]" class="waves-effect list-group-item list-group-item-action" [routerLinkActive]="['active']">{{ article.title }}</a>
+<div class="progress primary-color-dark" *ngIf="articleList==null;else compContent">
+  <div class="indeterminate"></div>
 </div>
+
+<ng-template #compContent>
+  <div class="list-group " *ngFor="let article of articleList">
+    <a [routerLink]="['./',article.id] " class="waves-effect list-group-item list-group-item-action" routerLinkActive="active">
+      <div>
+        {{ article.title }}
+      </div>
+      <small class="float-right grey-text">{{ article.date | timeAgo }}</small>
+    </a>
+  </div>
+</ng-template>

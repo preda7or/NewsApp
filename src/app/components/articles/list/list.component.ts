@@ -11,11 +11,13 @@ import { ArticlesService } from '@app-services/articles.service';
 })
 export class ListComponent implements OnInit {
   //
-  articleList: Observable<ArticleList>;
+  articleList: ArticleList;
 
-  constructor(private articles: ArticlesService) {
-    this.articleList = this.articles.getArticleList();
+  constructor(private articleService: ArticlesService) {}
+
+  ngOnInit() {
+    this.articleService
+      .getArticleList()
+      .subscribe(articles => (this.articleList = articles));
   }
-
-  ngOnInit() {}
 }

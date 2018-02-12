@@ -1,7 +1,17 @@
-import { Article } from './../../services/articles.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArticlesComponent } from './articles.component';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
+import { ArticleInputComponent } from '@app-components/article-input/article-input.component';
+import { ListComponent } from '@app-components/articles/list/list.component';
+import { ArticleComponent } from '@app-components/articles/article/article.component';
+import { EscapePipe } from '@app-pipes/escape.pipe';
+import { BigthumbPipe } from '@app-pipes/bigthumb.pipe';
+import { ReprocessPipe } from '@app-pipes/reprocess.pipe';
+import { ArticlesService } from '@app-services/articles.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CleanUrlPipe } from '@app-pipes/cleanurl.pipe';
 
 const articleListResponse = {
   response: {
@@ -214,7 +224,21 @@ describe('ArticlesComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [ArticlesComponent]
+        declarations: [
+          ArticlesComponent,
+          ArticleInputComponent,
+          ListComponent,
+          ArticleComponent,
+          EscapePipe,
+          BigthumbPipe,
+          ReprocessPipe,
+          CleanUrlPipe
+        ],
+        imports: [
+          RouterModule.forRoot([{ path: '', component: ArticlesComponent }]),
+          HttpClientModule
+        ],
+        providers: [{ provide: APP_BASE_HREF, useValue: '/' }, ArticlesService]
       }).compileComponents();
     })
   );

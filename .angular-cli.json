@@ -15,7 +15,11 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": ["styles.scss"],
+      "styles": [
+        "assets/css/bootstrap.min.css",
+        "assets/css/mdb.pro.min.css",
+        "assets/css/style.css"
+      ],
       "scripts": [
         "assets/js/jquery-3.2.1.min.js",
         "assets/js/popper.min.js",
