@@ -1,27 +1,27 @@
 # NewsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+This Angular SPA in its `Articles` section lists the ten latest The Guardian article.
 
-## Development server
+Selecting from the list the app presents the article in more details.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Relying on The Guardian’s API (open-platform.theguardian.com)
 
-## Code scaffolding
+The article url input can be used to open the details of a specific The Guardian article.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Some technical details
 
-## Build
+The app uses 
+- encoded article urls as parameters, child routing and router-outlet to identify the selected article
+- guard and resolver to verify the existence of article and redirect the app in case of no or invalid selection
+- an article lookup and a very simple "caching" service
+- Material Design for Bootstrap (mdbootstrap.com) as design framwork
+- some custom pipes to adjust the article content and to sanitize input urls 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Further thoughts
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This solution could be further imporoved
+- from caching and loading spinner point of view
+- by adding server-side rendering
+- service worker and caching to make it offline proof
+- with more detailed unit and e2e testing cases
+...

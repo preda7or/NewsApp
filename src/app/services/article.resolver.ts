@@ -20,7 +20,6 @@ export class ArticleResolver implements Resolve<Article> {
 
   private navigateToArticle(route: ActivatedRouteSnapshot, id: string) {
     const urlSegments = [...route.parent.url.map(seg => seg.path), id];
-    console.log('Redirecting to:', urlSegments.join('/'));
     this.router.navigate(urlSegments);
   }
 
@@ -44,12 +43,16 @@ export class ArticleResolver implements Resolve<Article> {
       return this.articlesService
         .getArticle(routeId)
         .catch((err: HttpErrorResponse) => {
-          console.error('Invalid article, trying to redirect to first one!');
+          if (console) {
+            console.error('Invalid article, trying to redirect to first one!');
+          }
           return this.articlesService.getFirstId().map(id => {
             if (id === routeId) {
-              console.error(
-                'Could not load first article, nowhere to redirect!'
-              );
+              if (console) {
+                console.error(
+                  'Could not load first article, nowhere to redirect!'
+                );
+              }
               return null;
             } else {
               this.navigateToArticle(route, id);
