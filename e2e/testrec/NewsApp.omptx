@@ -1,0 +1,425 @@
+{
+    "project": {
+        "id": "8yemy3bjh",
+        "name": "NewsApp",
+        "baseUrl": "localhost:4200",
+        "suites": [
+            "albujw891",
+            "9sija9b2j"
+        ],
+        "windowWidth": 1440,
+        "windowHeight": 834,
+        "isTrusted": true
+    },
+    "suitesMap": {
+        "albujw891": {
+            "id": "albujw891",
+            "name": "Home page",
+            "url": "/",
+            "scenarios": [
+                "bj3k0d9qd"
+            ],
+            "scenarioCounter": 1
+        },
+        "9sija9b2j": {
+            "id": "9sija9b2j",
+            "name": "Articles page",
+            "url": "/articles/",
+            "scenarios": [
+                "btp5jp8p8",
+                "9wqy2jb3q",
+                "8ot8wr8m7"
+            ],
+            "scenarioCounter": 3
+        }
+    },
+    "scenariosMap": {
+        "bj3k0d9qd": {
+            "id": "bj3k0d9qd",
+            "name": "should show header",
+            "commands": [
+                "b0igqa8yh",
+                "b86cnmait"
+            ]
+        },
+        "btp5jp8p8": {
+            "id": "btp5jp8p8",
+            "name": "root should redirect to first article",
+            "commands": [
+                "a119p6arm",
+                "89yzs38vt",
+                "aegog1b0n",
+                "9jw4cabqb"
+            ]
+        },
+        "9wqy2jb3q": {
+            "id": "9wqy2jb3q",
+            "name": "typing in an url changes article and menu activation",
+            "commands": [
+                "b9eyffayr",
+                "br8u2aa6k",
+                "bs1bfhb9b",
+                "83v6gyb7n",
+                "81wzojaph",
+                "bqjrth8rx",
+                "amo1ndbg5"
+            ],
+            "insertionPointer": 8
+        },
+        "8ot8wr8m7": {
+            "id": "8ot8wr8m7",
+            "name": "selecting from list changes article and menu activation",
+            "commands": [
+                "9r4n4mbpt",
+                "8kwplwabu",
+                "a4hqiv80b",
+                "asi9ni8xv"
+            ]
+        }
+    },
+    "commandsMap": {
+        "b0igqa8yh": {
+            "id": "b0igqa8yh",
+            "type": "getElementText",
+            "selector": "html > body > app-root > main > div > app-home > h2",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-home:nth-of-type(1) > h2.my-5:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-home > h2",
+                "onlyClasses": "html > body > app-root > main > div.container > app-home > h2.my-5",
+                "onlyTags": "html > body > app-root > main > div > app-home > h2"
+            },
+            "clientRect": {
+                "left": 135,
+                "top": 104,
+                "width": 690,
+                "height": 38
+            },
+            "assertion": "Home sweet home...",
+            "comparer": "EQUALS",
+            "angular": "2",
+            "image": ""
+        },
+        "b86cnmait": {
+            "id": "b86cnmait",
+            "type": "isPresent",
+            "selector": "#navbarContent > ul > li > a",
+            "selectors": {
+                "fullPath": "#navbarContent > ul.navbar-nav.mr-auto:nth-of-type(1) > li.nav-item:nth-of-type(1) > a.nav-link:nth-of-type(1)",
+                "helpingClasses": "#navbarContent > ul > li > a",
+                "onlyClasses": "#navbarContent > ul.navbar-nav.mr-auto > li.nav-item > a.nav-link",
+                "onlyTags": "#navbarContent > ul > li > a"
+            },
+            "clientRect": {
+                "left": 240,
+                "top": 8,
+                "width": 64.6875,
+                "height": 40
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "a119p6arm": {
+            "id": "a119p6arm",
+            "type": "clickElement",
+            "selector": "#navbarContent > ul > li > a",
+            "selectors": {
+                "fullPath": "#navbarContent > ul.navbar-nav.mr-auto:nth-of-type(1) > li.nav-item.active:nth-of-type(1) > a.nav-link:nth-of-type(1)",
+                "helpingClasses": "#navbarContent > ul > li > a",
+                "onlyClasses": "#navbarContent > ul.navbar-nav.mr-auto > li.nav-item.active > a.nav-link",
+                "onlyTags": "#navbarContent > ul > li > a"
+            },
+            "clientRect": {
+                "left": 230,
+                "top": 8,
+                "width": 64.6875,
+                "height": 40
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "89yzs38vt": {
+            "id": "89yzs38vt",
+            "type": "isElementEnabled",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(1) > a",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-list:nth-of-type(1) > div.list-group:nth-of-type(1) > a.waves-effect.list-group-item.list-group-item-action.active:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(1) > a",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-list > div.list-group > a.waves-effect.list-group-item.list-group-item-action.active",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-list > div:nth-of-type(1) > a"
+            },
+            "clientRect": {
+                "left": 605,
+                "top": 163,
+                "width": 210,
+                "height": 140.6666717529297
+            },
+            "assertion": true,
+            "angular": "2",
+            "image": ""
+        },
+        "aegog1b0n": {
+            "id": "aegog1b0n",
+            "type": "isElementEnabled",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > div > button",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-input:nth-of-type(1) > div.pt-1:nth-of-type(1) > form:nth-of-type(1) > div.md-form:nth-of-type(1) > div.prefix.pt-0:nth-of-type(1) > button.btn.px-1.mt-0.waves-effect.waves-light.btn-outline-primary:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > div > button",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-input > div.pt-1 > form > div.md-form > div.prefix.pt-0 > button.btn.px-1.mt-0.waves-effect.waves-light.btn-outline-primary",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-input > div > form > div > div > button"
+            },
+            "clientRect": {
+                "left": 611,
+                "top": 87,
+                "width": 30.291667938232422,
+                "height": 46.958335876464844
+            },
+            "assertion": false,
+            "angular": "2",
+            "image": ""
+        },
+        "9jw4cabqb": {
+            "id": "9jw4cabqb",
+            "type": "isElementEnabled",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-list:nth-of-type(1) > div.list-group:nth-of-type(2) > a.waves-effect.list-group-item.list-group-item-action:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a",
+                "onlyClasses": "::tr-nth(2) html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-list > div.list-group > a.waves-effect.list-group-item.list-group-item-action",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-list > div:nth-of-type(2) > a"
+            },
+            "clientRect": {
+                "left": 605,
+                "top": 304,
+                "width": 210,
+                "height": 140.6666717529297
+            },
+            "assertion": false,
+            "angular": "2",
+            "image": ""
+        },
+        "b9eyffayr": {
+            "id": "b9eyffayr",
+            "type": "clickElement",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > label",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-input:nth-of-type(1) > div.pt-1:nth-of-type(1) > form:nth-of-type(1) > div.md-form:nth-of-type(1) > label:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > label",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-input > div.pt-1 > form > div.md-form > label",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-input > div > form > div > label"
+            },
+            "clientRect": {
+                "left": 653,
+                "top": 100,
+                "width": 77.58333587646484,
+                "height": 24
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "br8u2aa6k": {
+            "id": "br8u2aa6k",
+            "type": "clickElement",
+            "selector": "#articleUrl",
+            "selectors": {
+                "fullPath": "#articleUrl",
+                "helpingClasses": "#articleUrl",
+                "onlyClasses": "#articleUrl",
+                "onlyTags": "#articleUrl"
+            },
+            "clientRect": {
+                "left": 653,
+                "top": 87,
+                "width": 162,
+                "height": 52.16666793823242
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "bs1bfhb9b": {
+            "id": "bs1bfhb9b",
+            "type": "sendKeysToElement",
+            "selector": "#articleUrl",
+            "selectors": {
+                "fullPath": "#articleUrl",
+                "helpingClasses": "#articleUrl",
+                "onlyClasses": "#articleUrl",
+                "onlyTags": "#articleUrl"
+            },
+            "clientRect": {
+                "left": 883,
+                "top": 87,
+                "width": 301.97918701171875,
+                "height": 52.16666793823242
+            },
+            "keys": "",
+            "altKey": false,
+            "ctrlKey": false,
+            "shiftKey": false,
+            "angular": "2",
+            "image": ""
+        },
+        "83v6gyb7n": {
+            "id": "83v6gyb7n",
+            "type": "sendKeysToElement",
+            "selector": "#articleUrl",
+            "selectors": {
+                "fullPath": "#articleUrl",
+                "helpingClasses": "#articleUrl",
+                "onlyClasses": "#articleUrl",
+                "onlyTags": "#articleUrl"
+            },
+            "clientRect": {
+                "left": 653,
+                "top": 87,
+                "width": 162,
+                "height": 52.16666793823242
+            },
+            "keys": "https://www.theguardian.com/us-news/2018/feb/09/john-kelly-from-the-designated-white-house-grownup-to-trumps-enabler",
+            "altKey": false,
+            "ctrlKey": false,
+            "shiftKey": false,
+            "angular": "2",
+            "image": ""
+        },
+        "81wzojaph": {
+            "id": "81wzojaph",
+            "type": "clickElement",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > div > button",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-input:nth-of-type(1) > div.pt-1:nth-of-type(1) > form:nth-of-type(1) > div.md-form:nth-of-type(1) > div.prefix.pt-0:nth-of-type(1) > button.btn.px-1.mt-0.waves-effect.waves-light.btn-outline-primary:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > div > button",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-input > div.pt-1 > form > div.md-form > div.prefix.pt-0 > button.btn.px-1.mt-0.waves-effect.waves-light.btn-outline-primary",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-input > div > form > div > div > button"
+            },
+            "clientRect": {
+                "left": 611,
+                "top": 87,
+                "width": 30.291667938232422,
+                "height": 46.958335876464844
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "bqjrth8rx": {
+            "id": "bqjrth8rx",
+            "type": "getElementText",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-8 > app-article-detail > div > div.card-body > h2",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-8:nth-of-type(1) > app-article-detail:nth-of-type(1) > div.card.card-cascade.wider.reverse:nth-of-type(1) > div.card-body:nth-of-type(2) > h2.card-title:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-8 > app-article-detail > div > div.card-body > h2",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-8 > app-article-detail > div.card.card-cascade.wider.reverse > div.card-body > h2.card-title",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(1) > app-article-detail > div > div:nth-of-type(2) > h2"
+            },
+            "clientRect": {
+                "left": 163,
+                "top": 363,
+                "width": 374,
+                "height": 112
+            },
+            "assertion": "Pressure grows on John Kelly amid reports he offered to resign",
+            "comparer": "EQUALS",
+            "angular": "2",
+            "image": ""
+        },
+        "amo1ndbg5": {
+            "id": "amo1ndbg5",
+            "type": "isPresent",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > div > button.active",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-input:nth-of-type(1) > div.pt-1:nth-of-type(1) > form:nth-of-type(1) > div.md-form:nth-of-type(1) > div.prefix.pt-0:nth-of-type(1) > button.btn.px-1.mt-0.waves-effect.waves-light.btn-primary:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-input > div > form > div > div > button",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-input > div.pt-1 > form > div.md-form > div.prefix.pt-0 > button.btn.px-1.mt-0.waves-effect.waves-light.btn-primary",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-input > div > form > div > div > button"
+            },
+            "clientRect": {
+                "left": 611,
+                "top": 87,
+                "width": 26.291667938232422,
+                "height": 45.833335876464844
+            },
+            "angular": "2",
+            "image": "",
+            "isWaitCommand": false
+        },
+        "9r4n4mbpt": {
+            "id": "9r4n4mbpt",
+            "type": "clickElement",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-list:nth-of-type(1) > div.list-group:nth-of-type(2) > a.waves-effect.list-group-item.list-group-item-action:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a",
+                "onlyClasses": "::tr-nth(2) html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-list > div.list-group > a.waves-effect.list-group-item.list-group-item-action",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-list > div:nth-of-type(2) > a"
+            },
+            "clientRect": {
+                "left": 608,
+                "top": 304,
+                "width": 210,
+                "height": 141
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "8kwplwabu": {
+            "id": "8kwplwabu",
+            "type": "isPresent",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-list:nth-of-type(1) > div.list-group:nth-of-type(2) > a.waves-effect.list-group-item.list-group-item-action.active:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-list > div.list-group > a.waves-effect.list-group-item.list-group-item-action.active",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-list > div:nth-of-type(2) > a"
+            },
+            "clientRect": {
+                "left": 608,
+                "top": 304,
+                "width": 210,
+                "height": 141
+            },
+            "angular": "2",
+            "image": ""
+        },
+        "a4hqiv80b": {
+            "id": "a4hqiv80b",
+            "type": "getElementText",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-8 > app-article-detail > div > div.card-body > h2",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-8:nth-of-type(1) > app-article-detail:nth-of-type(1) > div.card.card-cascade.wider.reverse:nth-of-type(1) > div.card-body:nth-of-type(2) > h2.card-title:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-8 > app-article-detail > div > div.card-body > h2",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-8 > app-article-detail > div.card.card-cascade.wider.reverse > div.card-body > h2.card-title",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(1) > app-article-detail > div > div:nth-of-type(2) > h2"
+            },
+            "clientRect": {
+                "left": 166,
+                "top": 363,
+                "width": 374,
+                "height": 152
+            },
+            "assertion": "I was an aid worker in Haiti. The debauchery was shocking | Phoebe Greenwood",
+            "comparer": "EQUALS",
+            "angular": "2",
+            "image": ""
+        },
+        "asi9ni8xv": {
+            "id": "asi9ni8xv",
+            "type": "getElementText",
+            "selector": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a > div",
+            "selectors": {
+                "fullPath": "html > body:nth-of-type(1) > app-root:nth-of-type(1) > main:nth-of-type(1) > div.container:nth-of-type(1) > app-articles:nth-of-type(1) > div.row.py-4:nth-of-type(1) > div.col-md-4:nth-of-type(2) > app-article-list:nth-of-type(1) > div.list-group:nth-of-type(2) > a.waves-effect.list-group-item.list-group-item-action.active:nth-of-type(1) > div:nth-of-type(1)",
+                "helpingClasses": "html > body > app-root > main > div > app-articles > div > div.col-md-4 > app-article-list > div:nth-of-type(2) > a > div",
+                "onlyClasses": "html > body > app-root > main > div.container > app-articles > div.row.py-4 > div.col-md-4 > app-article-list > div.list-group > a.waves-effect.list-group-item.list-group-item-action.active > div",
+                "onlyTags": "html > body > app-root > main > div > app-articles > div > div:nth-of-type(2) > app-article-list > div:nth-of-type(2) > a > div"
+            },
+            "clientRect": {
+                "left": 629,
+                "top": 317,
+                "width": 168,
+                "height": 96
+            },
+            "assertion": "I was an aid worker in Haiti. The debauchery was shocking | Phoebe Greenwood",
+            "comparer": "EQUALS",
+            "angular": "2",
+            "image": ""
+        }
+    }
+}

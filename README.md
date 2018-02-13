@@ -1,5 +1,7 @@
 # NewsApp
 
+### You can check the working demo at: https://preda7or.github.io/newsapp/
+
 This Angular SPA in its `Articles` section lists the ten latest The Guardian article.
 
 Selecting from the list the app presents the article in more details.
