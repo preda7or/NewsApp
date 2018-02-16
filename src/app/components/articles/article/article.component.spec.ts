@@ -6,6 +6,7 @@ import { ReprocessPipe } from '@app-pipes/reprocess.pipe';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { CleanUrlPipe } from '@app-pipes/cleanurl.pipe';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 describe('ArticleComponent', () => {
   let component: ArticleComponent;
@@ -18,7 +19,8 @@ describe('ArticleComponent', () => {
           ArticleComponent,
           BigthumbPipe,
           ReprocessPipe,
-          CleanUrlPipe
+          CleanUrlPipe,
+          TimeAgoPipe
         ],
         imports: [
           RouterModule.forRoot([{ path: '', component: ArticleComponent }])

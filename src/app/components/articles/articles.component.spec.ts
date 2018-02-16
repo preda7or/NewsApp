@@ -12,6 +12,7 @@ import { ReprocessPipe } from '@app-pipes/reprocess.pipe';
 import { ArticlesService } from '@app-services/articles.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CleanUrlPipe } from '@app-pipes/cleanurl.pipe';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 const articleListResponse = {
   response: {
@@ -232,7 +233,8 @@ describe('ArticlesComponent', () => {
           EscapePipe,
           BigthumbPipe,
           ReprocessPipe,
-          CleanUrlPipe
+          CleanUrlPipe,
+          TimeAgoPipe
         ],
         imports: [
           RouterModule.forRoot([{ path: '', component: ArticlesComponent }]),

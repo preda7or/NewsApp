@@ -5,6 +5,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ArticlesService } from '@app-services/articles.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 describe('ListComponent', () => {
   let component: ListComponent;
@@ -13,7 +14,7 @@ describe('ListComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [ListComponent],
+        declarations: [ListComponent, TimeAgoPipe],
         imports: [
           RouterModule.forRoot([{ path: '', component: ListComponent }]),
           HttpClientModule

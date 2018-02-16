@@ -17,6 +17,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { CleanUrlPipe } from '@app-pipes/cleanurl.pipe';
 import { ArticleResolver } from '@app-services/article.resolver';
 import { ArticleGuard } from '@app-services/article.guard';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 describe('AppComponent', () => {
   beforeEach(
@@ -34,7 +35,8 @@ describe('AppComponent', () => {
           BigthumbPipe,
           ReprocessPipe,
           EscapePipe,
-          CleanUrlPipe
+          CleanUrlPipe,
+          TimeAgoPipe
         ],
         imports: [RouterModule, AppRoutingModule],
         providers: [
